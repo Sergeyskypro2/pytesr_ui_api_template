@@ -1,4 +1,4 @@
-# pytesr_ui_api_template
+# pytest_ui_api_template
 
 ## Шаблон для автоматизации тестирования на python
 
