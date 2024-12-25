@@ -11,49 +11,44 @@ class Movie:
     """Получение данных о фильмк"""
     def get_movie_data(self):
         headers = {
-            "Key": self.key,
-            "Value": self.value,
+            self.key: self.value,
             "Content-Type": "application/json"
         }
-        movie = requests.get(self.url + '/api/v2.2/films/301', headers=headers) # noqa
-        return movie.json()
+        resp = requests.get(self.url + '/api/v2.2/films/301', headers=headers) # noqa
+        return resp.json()
 
     """Поиск похожих фильмоф по ID"""
     def get_similar_by_id(self):
         headers = {
-            "Key": self.key,
-            "Value": self.value,
+            self.key: self.value,
             "Content-Type": "application/json"
         }
-        movies = requests.get(self.url + '/api/v2.2/films/301/similars', headers=headers) # noqa
-        return movies.json()
+        resp = requests.get(self.url + '/api/v2.2/films/301/similars', headers=headers) # noqa
+        return resp.json()
 
     """Получить список фильмов"""
     def get_list_of_movies(self):
         headers = {
-            "Key": self.key,
-            "Value": self.value,
+            self.key: self.value,
             "Content-Type": "application/json"
         }
-        movies = requests.get(self.url + '/api/v2.2/films/collections', headers=headers) # noqa
-        return movies.json()
+        resp = requests.get(self.url + '/api/v2.2/films/collections', headers=headers) # noqa
+        return resp.json()
 
     """Поиск фильма без ключевого слова"""
     def search_without_keyword(self):
         headers = {
-            "Key": self.key,
-            "Value": self.value,
+            self.key: self.value,
             "Content-Type": "application/json"
         }
-        movies = requests.get(self.url + '/api/v2.1/films/search-by-keyword', headers=headers) # noqa
-        return movies.json()
+        resp = requests.get(self.url + '/api/v2.1/films/search-by-keyword', headers=headers) # noqa
+        return resp.json()
 
     """Поиск персонажа без ID"""
     def search_staff_without_id(self):
         headers = {
-            "Key": self.key,
-            "Value": self.value,
+            self.key: self.value,
             "Content-Type": "application/json"
         }
-        movies = requests.get(self.url + '/api/v1/staff', headers=headers) # noqa
-        return movies.json()
+        resp = requests.get(self.url + '/api/v1/staff', headers=headers) # noqa
+        return resp.json()

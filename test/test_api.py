@@ -7,29 +7,28 @@ import allure
 def test_get_movie_data():
     movie_data = Movie()
     body = movie_data.get_movie_data()
-    # assert body.status_code == 200
-    print(body)
+    assert body["status_code"] == 200
 
 
 def test_similar_dy_id():
     similar_movies = Movie()
     body = similar_movies.get_similar_by_id()
-    print(body)
+    assert body["status_code"] == 200
 
 
 def test_list_of_movies():
     list = Movie()
     body = list.get_list_of_movies()
-    print(body)
+    assert body["status_code"] == 200
 
 
 def test_search_movie():
     movie = Movie()
-    boby = movie.search_without_keyword()
-    print(boby)
+    body = movie.search_without_keyword()
+    assert body["status_code"] == 400
 
 
 def test_search_staff():
     staff = Movie()
     body = staff.search_staff_without_id()
-    print(body)
+    assert body["status_code"] == 400
