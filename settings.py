@@ -1,0 +1,2 @@
+VALUE = "362da9a2-7ea6-4780-b14f-4f6a4c5cb03b"
+KEY = "X-API-KEY"
