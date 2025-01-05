@@ -6,29 +6,29 @@ import allure
 @allure.feature("ASSERT")
 def test_get_movie_data():
     movie = Movie()
-    body = movie.get_movie_data()
-    assert body["status_code"] == 200
+    resp = movie.get_movie_data()
+    assert resp["status_code"] == 200
 
 
 def test_similar_dy_id():
     similar = Movie()
-    body = similar.get_similar_by_id()
-    assert body["status_code"] == 200
+    resp = similar.get_similar_by_id()
+    assert resp["status_code"] == 200
 
 
 def test_list_of_movies():
     movies = Movie()
-    body = movies.get_list_of_movies()
-    assert body["status_code"] == 200
+    resp = movies.get_list_of_movies()
+    assert resp["status_code"] == 200
 
 
 def test_search_movie():
     movie = Movie()
-    body = movie.search_without_keyword()
-    assert body["status_code"] == 400
+    resp = movie.search_without_keyword()
+    assert resp["status_code"] == 400
 
 
 def test_search_staff():
     staff = Movie()
-    body = staff.search_staff_without_id()
-    assert body["status_code"] == 400
+    resp = staff.search_staff_without_id()
+    assert resp["status_code"] == 400
