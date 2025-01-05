@@ -5,20 +5,20 @@ import allure
 @allure.severity("blocker")
 @allure.feature("ASSERT")
 def test_get_movie_data():
-    movie_data = Movie()
-    body = movie_data.get_movie_data()
+    movie = Movie()
+    body = movie.get_movie_data()
     assert body["status_code"] == 200
 
 
 def test_similar_dy_id():
-    similar_movies = Movie()
-    body = similar_movies.get_similar_by_id()
+    similar = Movie()
+    body = similar.get_similar_by_id()
     assert body["status_code"] == 200
 
 
 def test_list_of_movies():
-    list = Movie()
-    body = list.get_list_of_movies()
+    movies = Movie()
+    body = movies.get_list_of_movies()
     assert body["status_code"] == 200
 
 
